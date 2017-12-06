@@ -46,6 +46,9 @@
                                     </subviews>
                                 </view>
                                 <size key="customSize" width="150" height="150"/>
+                                <connections>
+                                    <segue destination="FgI-Wd-7lz" kind="show" identifier="player_segue" id="ag1-KL-mot"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -53,12 +56,12 @@
                             <outlet property="delegate" destination="NVV-vO-zEf" id="eQa-9X-L5o"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Stuff" id="m7p-NG-KMZ"/>
+                    <navigationItem key="navigationItem" id="t3S-6i-1CQ"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NKJ-q0-FWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarItem title="Stuff" id="J3A-KI-b4o"/>
             </objects>
-            <point key="canvasLocation" x="512.79999999999995" y="222.63868065967017"/>
+            <point key="canvasLocation" x="1234" y="222"/>
         </scene>
         <!--Player View Controller-->
         <scene sceneID="gV9-fP-bpO">
@@ -69,28 +72,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwl-CH-n5C">
-                                <rect key="frame" x="0.0" y="228" width="375" height="211"/>
+                                <rect key="frame" x="0.0" y="228.5" width="375" height="211"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nwl-CH-n5C" secondAttribute="height" multiplier="16:9" id="fcn-gi-aov"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NC0-C3-EnO">
-                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="568" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FF4-nN-2yk">
-                                        <rect key="frame" x="172" y="20" width="30" height="30"/>
+                                        <rect key="frame" x="172" y="10" width="30" height="30"/>
                                         <state key="normal" title="Play"/>
                                         <connections>
                                             <action selector="playAction:" destination="FgI-Wd-7lz" eventType="touchUpInside" id="y2k-hs-9MF"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="819-7F-EEb">
+                                        <rect key="frame" x="8" y="10" width="48" height="30"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelAction:" destination="FgI-Wd-7lz" eventType="touchUpInside" id="iGA-13-qNh"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="819-7F-EEb" secondAttribute="bottom" constant="10" id="JAx-if-WEJ"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Rls-xg-2H4"/>
                                     <constraint firstAttribute="height" constant="50" id="fzC-R2-Wsm"/>
-                                    <constraint firstItem="FF4-nN-2yk" firstAttribute="centerY" secondItem="NC0-C3-EnO" secondAttribute="centerY" constant="10" id="pLC-bC-Qhf"/>
+                                    <constraint firstItem="819-7F-EEb" firstAttribute="leading" secondItem="NC0-C3-EnO" secondAttribute="leading" constant="8" id="hwz-Lx-V6I"/>
+                                    <constraint firstItem="FF4-nN-2yk" firstAttribute="centerY" secondItem="NC0-C3-EnO" secondAttribute="centerY" id="pLC-bC-Qhf"/>
                                     <constraint firstItem="FF4-nN-2yk" firstAttribute="centerX" secondItem="NC0-C3-EnO" secondAttribute="centerX" id="tum-Lb-QJj"/>
                                 </constraints>
                             </view>
@@ -154,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gCJ-VK-mXv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1407.2" y="222.63868065967017"/>
+            <point key="canvasLocation" x="1982" y="222"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="RWW-qg-APc">
@@ -240,7 +252,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="LhC-91-BcS" kind="relationship" relationship="viewControllers" id="IpD-qn-BOk"/>
-                        <segue destination="NVV-vO-zEf" kind="relationship" relationship="viewControllers" id="Sl1-LX-qMx"/>
+                        <segue destination="pWt-81-e4Z" kind="relationship" relationship="viewControllers" id="Sl1-LX-qMx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKu-oz-Bq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -264,6 +276,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="apw-Pj-gKU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-943" y="-1119"/>
+        </scene>
+        <!--Stuff-->
+        <scene sceneID="qxL-7h-49W">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pWt-81-e4Z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Stuff" id="m7p-NG-KMZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xF6-1d-Agr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NVV-vO-zEf" kind="relationship" relationship="rootViewController" id="N6C-iZ-7R6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nG2-W9-Cli" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="512" y="222.1889055472264"/>
         </scene>
     </scenes>
 </document>

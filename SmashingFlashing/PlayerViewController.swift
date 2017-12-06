@@ -9,41 +9,49 @@
 import UIKit
 import AVKit
 import AVFoundation
+import Photos
 class PlayerViewController: UIViewController {
-
     @IBOutlet weak var videoView: UIView!
-    var player: AVPlayer!
-    var playerLayer: AVPlayerLayer!
-    var mediaUrl: URL?
-    var isVideoPlaying = false
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var currentTimeLabel: UILabel!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var timeSlider: UISlider!
+    var mediaUrl: URL?
+    var player: AVPlayer!
+    var playerLayer: AVPlayerLayer!
+    var asset: PHAsset?
+    var isVideoPlaying = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        guard let url = mediaUrl else {
-//            //show alert with invalid url
-//            print("NO URL - CRASH")
-//            return
-//        }
-        let url = URL(string: "file:///Users/Nechaev/Library/Developer/CoreSimulator/Devices/4D4CCF19-A478-4884-B610-ACE5C3C455F1/data/Media/DCIM/100APPLE/IMG_0006.MOV")!
+        guard let url = mediaUrl else {
+            //show alert with invalid url
+            print("NO URL - CRASH")
+            return
+        }
+        //let url = URL(string: "file:///Users/Nechaev/Library/Developer/CoreSimulator/Devices/4D4CCF19-A478-4884-B610-ACE5C3C455F1/data/Media/DCIM/100APPLE/IMG_0006.MOV")!
         playButton.isEnabled = true
         timeSlider.value = 0
-        
         player = AVPlayer(url: url)
         playerLayer = AVPlayerLayer(player: player)
         player.currentItem?.addObserver(self, forKeyPath:"duration", options: [.new, .initial], context: nil)
         addTimeObserver()
-        playerLayer.videoGravity = .resize
+        playerLayer.videoGravity = .resizeAspect
         videoView.layer.addSublayer(playerLayer)
+        videoView.translatesAutoresizingMaskIntoConstraints = false
+        /*videoView.addConstraint(NSLayoutConstraint(item: videoView,
+                                                   attribute: .width,
+                                                   relatedBy: .equal,
+                                                   toItem: videoView,
+                                                   attribute: .height,
+                                                   multiplier: 9.0/16.0,//getMultiplierValue(from: url),
+                                                   constant: 0))*/
+        //NotificationCenter.default.addObserver(self, selector: #selector(self.rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         playerLayer.frame = videoView.bounds
-        playButton.isEnabled = true
     }
     
     @IBAction func playAction(_ sender: UIButton) {
@@ -56,6 +64,9 @@ class PlayerViewController: UIViewController {
         }
         isVideoPlaying = !isVideoPlaying
     }
+    @IBAction func cancelAction(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         player.seek(to: CMTimeMake(Int64(sender.value*1000), 1000))
@@ -63,7 +74,7 @@ class PlayerViewController: UIViewController {
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "duration", let duration = player.currentItem?.duration.seconds, duration > 0.0 {
-            self.durationLabel.text = getTimeString(from: player.currentItem!.duration)
+            self.durationLabel.text = player.currentItem?.duration.timeString
         }
     }
     
@@ -75,17 +86,28 @@ class PlayerViewController: UIViewController {
             self?.timeSlider.minimumValue = 0
             self?.timeSlider.maximumValue = Float(currentItem.duration.seconds)
             self?.timeSlider.value = Float(currentItem.currentTime().seconds)
-            self?.currentTimeLabel.text = self?.getTimeString(from: currentItem.currentTime())
+            self?.currentTimeLabel.text? = currentItem.currentTime().timeString
             //self?.durationLabel.text = self?.getTimeString(from: currentItem.duration - currentItem.currentTime())
         })
     }
     
-    func getTimeString(from time: CMTime) -> String? {
-        let totalSeconds = CMTimeGetSeconds(time)//time.seconds
-        let hours = Int(totalSeconds/3600)
-        let minutes = Int(totalSeconds/60)%60
+    func getMultiplierValue(from url: URL) -> CGFloat {
+        let sizeOfVideo = AVAsset(url: url).tracks(withMediaType: AVMediaType.video)[0].naturalSize
+        if sizeOfVideo.height / sizeOfVideo.width > 1 {
+            return sizeOfVideo.height / sizeOfVideo.width
+        } else {
+            return sizeOfVideo.width / sizeOfVideo.height
+        }
+    }
+}
+
+extension CMTime {
+    public var timeString: String {
+        let totalSeconds = CMTimeGetSeconds(self)
+        let hours = Int(totalSeconds / 3600)
+        let minutes = Int(totalSeconds / 60) % 60
         let seconds = Int(totalSeconds.truncatingRemainder(dividingBy: 60))
-        if hours>0 {
+        if hours > 0 {
             return String(format:"%i:%02i:%02i", arguments: [hours, minutes, seconds])
         } else {
             return String(format: "%02i:%02i", arguments: [minutes, seconds])
