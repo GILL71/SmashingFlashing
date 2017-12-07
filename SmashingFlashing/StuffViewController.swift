@@ -16,6 +16,7 @@ class StuffViewController: UICollectionViewController {
 
     var videos: PHFetchResult<PHAsset>?
     var urls = [URL]()
+    var recievedUrl: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,45 +103,37 @@ class StuffViewController: UICollectionViewController {
 //            PHCachingImageManager().requestAVAsset(forVideo: asset, options: nil, resultHandler: resultHandler)
 //    }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("prepare for segue")
-        if segue.identifier == "player_segue" {
-            if let playerVC = segue.destination as? PlayerViewController {
-                let asset = videos!.object(at: (self.collectionView?.indexPath(for: sender as! UICollectionViewCell)?.row)!)
-                playerVC.asset = asset
-                guard (asset.mediaType == PHAssetMediaType.video)   else {
-                    print("Not a valid video media type")
-                    return
-                }
-//                let resultHandler = {[weak playerVC] (asset: AVAsset?, audioMix: AVAudioMix?, info: [AnyHashable: Any]?) in
-//                    DispatchQueue.main.async {
-//                        let asset = asset as! AVURLAsset
-//                        print("closure")
-//                        print(asset.url)
-//                        print("closure")
-//                        playerVC?.mediaUrl = asset.url
-//                    }
-//                }
-                
-                DispatchQueue.global(qos: .userInitiated).async {
-                    let downloadGroup = DispatchGroup()
-                    downloadGroup.enter() // 3
-                    PHCachingImageManager().requestAVAsset(forVideo: asset, options: nil, resultHandler: { (asset: AVAsset?, audioMix: AVAudioMix?, info: [AnyHashable: Any]?) in
-                            let asset = asset as! AVURLAsset
-                            print("closure")
-                            print(asset.url)
-                            print("closure")
-                            playerVC.mediaUrl = asset.url
-                            downloadGroup.leave() //4
-                    })
-                    
-                    downloadGroup.wait() // 5
-                    DispatchQueue.main.async { // 6
-                        
-                    }
-                }
-//                PHCachingImageManager().requestAVAsset(forVideo: asset, options: nil, resultHandler: resultHandler)
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let rowNum = indexPath.row
+        DispatchQueue.global(qos: .userInitiated).async { // 1
+            let downloadGroup = DispatchGroup()
+            downloadGroup.enter() // 3
+            let asset = self.videos!.object(at: rowNum)
+            guard (asset.mediaType == PHAssetMediaType.video) else {
+                print("Not a valid video media type")
+                return
             }
+            PHCachingImageManager().requestAVAsset(forVideo: asset, options: nil, resultHandler: { (asset: AVAsset?, audioMix: AVAudioMix?, info: [AnyHashable: Any]?) in
+                let asset = asset as! AVURLAsset
+                self.recievedUrl = asset.url
+                //playerVC.mediaUrl = URL(string: "file:///Users/Nechaev/Library/Developer/CoreSimulator/Devices/4D4CCF19-A478-4884-B610-ACE5C3C455F1/data/Media/DCIM/100APPLE/IMG_0006.MOV")!
+                downloadGroup.leave() //4
+            })
+            downloadGroup.wait() // 5
+            DispatchQueue.main.async { // 6
+                self.performSegue(withIdentifier: "player_segue", sender: self)
+            }
+        }
+    }
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let url = self.recievedUrl else {
+            print("no url in prepare for segue")
+            return
+        }
+        if let playerVC = segue.destination as? PlayerViewController {
+            playerVC.mediaUrl = url
         }
     }
 
