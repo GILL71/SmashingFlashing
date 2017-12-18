@@ -1,0 +1,6 @@
+framework module Pods_SmashingFlashing {
+  umbrella header "Pods-SmashingFlashing-umbrella.h"
+
+  export *
+  module * { export * }
+}
