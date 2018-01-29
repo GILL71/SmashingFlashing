@@ -93,6 +93,15 @@ class RecordRealmDataSource: DataSource {
         }
         return true
     }
+    
+    func getUrlByName(name: String) -> String? {
+        let predicate = NSPredicate(format: "name = %@", name)
+        let targetRecord = realm.objects(RealmRecord.self).filter(predicate)
+        if targetRecord.count == 0 {
+            return nil
+        }
+        return targetRecord.first?.urlString
+    }
 }
 
 protocol DataSource {
@@ -105,5 +114,7 @@ protocol DataSource {
     func clean()
     func delete(item: T)
     func deleteById(id: String)
+    
+    func getUrlByName(name: String) -> String?
 }
 

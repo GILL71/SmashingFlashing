@@ -7,6 +7,7 @@ target 'SmashingFlashing' do
 
   # Pods for SmashingFlashing
   pod 'RealmSwift'
+  pod 'MGSwipeTableCell'
   target 'SmashingFlashingTests' do
     inherit! :search_paths
     # Pods for testing

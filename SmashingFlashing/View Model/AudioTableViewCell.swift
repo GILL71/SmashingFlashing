@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MGSwipeTableCell
 
-class AudioTableViewCell: UITableViewCell  {
+class AudioTableViewCell: MGSwipeTableCell  {
     
     @IBOutlet var durationLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!

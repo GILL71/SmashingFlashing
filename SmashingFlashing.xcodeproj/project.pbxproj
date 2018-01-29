@@ -13,21 +13,41 @@
 		4B1B26E41F7BC0270002199E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B1B26E31F7BC0270002199E /* Assets.xcassets */; };
 		4B1B26E71F7BC0270002199E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B1B26E51F7BC0270002199E /* LaunchScreen.storyboard */; };
 		4B1B27161F8BBF640002199E /* StuffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1B27151F8BBF640002199E /* StuffViewController.swift */; };
-		4B1B271A1FADDF070002199E /* ClownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1B27191FADDF070002199E /* ClownViewController.swift */; };
 		4B1B271C1FADE3D10002199E /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1B271B1FADE3D10002199E /* PlayerViewController.swift */; };
+		4B34F3AC200FF3A100523104 /* Cutter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B34F3AB200FF3A100523104 /* Cutter.swift */; };
+		4B34F3AE20108EDC00523104 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B34F3AD20108EDB00523104 /* AlertManager.swift */; };
+		4B6682D4200F7CDB00AF9916 /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6682D3200F7CDB00AF9916 /* LoadViewController.swift */; };
 		4BFD0F6C1FDB1DC30086088A /* Clown.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFD0F6B1FDB1DC30086088A /* Clown.storyboard */; };
-		4BFD0F711FDB1E830086088A /* Stuff.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFD0F701FDB1E830086088A /* Stuff.storyboard */; };
-		4BFD0F7B1FDC137D0086088A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B1B26E81F7BC0270002199E /* Info.plist */; };
-		4BFD0F7C1FDC138D0086088A /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 4B1B26E81F7BC0270002199E /* Info.plist */; };
 		4BFD0F971FE6A4250086088A /* SmashingFlashingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD0F961FE6A4250086088A /* SmashingFlashingTests.swift */; };
-		4BFD0FDD1FE71F280086088A /* AudioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD0FDC1FE71F280086088A /* AudioTableViewController.swift */; };
 		4BFD0FDF1FE71F750086088A /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD0FDE1FE71F750086088A /* DataStore.swift */; };
 		4BFD0FE11FE726070086088A /* AudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD0FE01FE726070086088A /* AudioTableViewCell.swift */; };
+		4BFD0FF61FF82B800086088A /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD0FF51FF82B800086088A /* RecorderViewController.swift */; };
+		4BFD0FF81FF82BC80086088A /* RecordsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD0FF71FF82BC80086088A /* RecordsList.swift */; };
+		4BFD0FFA1FF82C310086088A /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD0FF91FF82C310086088A /* Player.swift */; };
+		4BFD0FFC1FF82C990086088A /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD0FFB1FF82C990086088A /* Recorder.swift */; };
+		4BFD0FFE1FF82CC70086088A /* FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD0FFD1FF82CC70086088A /* FileName.swift */; };
+		4BFD10041FF848520086088A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BFD10031FF848510086088A /* Info.plist */; };
+		4BFD10061FF849BA0086088A /* SlideButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD10051FF849BA0086088A /* SlideButtonAction.swift */; };
+		4BFD10081FF84ABC0086088A /* WalkmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD10071FF84ABC0086088A /* WalkmanViewController.swift */; };
+		4BFD10141FF9780F0086088A /* SmashingFlashingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD10131FF9780F0086088A /* SmashingFlashingUITests.swift */; };
+		4BFD10311FFB9F350086088A /* Sound.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFD10301FFB9F350086088A /* Sound.storyboard */; };
+		4BFD10351FFBA1AE0086088A /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFD10341FFBA1AE0086088A /* List.storyboard */; };
+		4BFD10372002BAFF0086088A /* PhotoLibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD10362002BAFF0086088A /* PhotoLibraryManager.swift */; };
+		4BFD103D2004D4BE0086088A /* RecordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD103C2004D4BE0086088A /* RecordVideoViewController.swift */; };
+		4BFD104220055ABA0086088A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD104120055ABA0086088A /* Helper.swift */; };
+		4BFD104420079C0F0086088A /* TrueMerger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD104320079C0F0086088A /* TrueMerger.swift */; };
 		C79D2E43BB77907772388E2E /* Pods_SmashingFlashing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D84E3F2C2B5DAE733D5799DB /* Pods_SmashingFlashing.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		4BFD0F991FE6A4250086088A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B1B26D11F7BC0270002199E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B1B26D81F7BC0270002199E;
+			remoteInfo = SmashingFlashing;
+		};
+		4BFD10161FF9780F0086088A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4B1B26D11F7BC0270002199E /* Project object */;
 			proxyType = 1;
@@ -44,18 +64,35 @@
 		4B1B26E11F7BC0270002199E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B1B26E31F7BC0270002199E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B1B26E61F7BC0270002199E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4B1B26E81F7BC0270002199E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B1B27151F8BBF640002199E /* StuffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuffViewController.swift; sourceTree = "<group>"; };
-		4B1B27191FADDF070002199E /* ClownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClownViewController.swift; sourceTree = "<group>"; };
 		4B1B271B1FADE3D10002199E /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		4B34F3AB200FF3A100523104 /* Cutter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cutter.swift; sourceTree = "<group>"; };
+		4B34F3AD20108EDB00523104 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		4B6682D3200F7CDB00AF9916 /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
 		4BFD0F6B1FDB1DC30086088A /* Clown.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Clown.storyboard; sourceTree = "<group>"; };
-		4BFD0F701FDB1E830086088A /* Stuff.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Stuff.storyboard; sourceTree = "<group>"; };
 		4BFD0F941FE6A4250086088A /* SmashingFlashingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmashingFlashingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BFD0F961FE6A4250086088A /* SmashingFlashingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmashingFlashingTests.swift; sourceTree = "<group>"; };
 		4BFD0F981FE6A4250086088A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4BFD0FDC1FE71F280086088A /* AudioTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTableViewController.swift; sourceTree = "<group>"; };
 		4BFD0FDE1FE71F750086088A /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		4BFD0FE01FE726070086088A /* AudioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTableViewCell.swift; sourceTree = "<group>"; };
+		4BFD0FF51FF82B800086088A /* RecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewController.swift; sourceTree = "<group>"; };
+		4BFD0FF71FF82BC80086088A /* RecordsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsList.swift; sourceTree = "<group>"; };
+		4BFD0FF91FF82C310086088A /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		4BFD0FFB1FF82C990086088A /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		4BFD0FFD1FF82CC70086088A /* FileName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileName.swift; sourceTree = "<group>"; };
+		4BFD10001FF831B40086088A /* SmashingFlashing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmashingFlashing.entitlements; sourceTree = "<group>"; };
+		4BFD10031FF848510086088A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BFD10051FF849BA0086088A /* SlideButtonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideButtonAction.swift; sourceTree = "<group>"; };
+		4BFD10071FF84ABC0086088A /* WalkmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkmanViewController.swift; sourceTree = "<group>"; };
+		4BFD10111FF9780F0086088A /* SmashingFlashingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmashingFlashingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BFD10131FF9780F0086088A /* SmashingFlashingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmashingFlashingUITests.swift; sourceTree = "<group>"; };
+		4BFD10151FF9780F0086088A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BFD10301FFB9F350086088A /* Sound.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sound.storyboard; sourceTree = "<group>"; };
+		4BFD10341FFBA1AE0086088A /* List.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
+		4BFD10362002BAFF0086088A /* PhotoLibraryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryManager.swift; sourceTree = "<group>"; };
+		4BFD103C2004D4BE0086088A /* RecordVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVideoViewController.swift; sourceTree = "<group>"; };
+		4BFD104120055ABA0086088A /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		4BFD104320079C0F0086088A /* TrueMerger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrueMerger.swift; sourceTree = "<group>"; };
 		71CE75FF24A4717AC03FC8A9 /* Pods-SmashingFlashing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashingFlashing.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmashingFlashing/Pods-SmashingFlashing.release.xcconfig"; sourceTree = "<group>"; };
 		AD970B57F7D6BFA4EFEEFB90 /* Pods-SmashingFlashing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashingFlashing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmashingFlashing/Pods-SmashingFlashing.debug.xcconfig"; sourceTree = "<group>"; };
 		D84E3F2C2B5DAE733D5799DB /* Pods_SmashingFlashing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmashingFlashing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +116,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4BFD100E1FF9780F0086088A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -87,6 +131,7 @@
 			children = (
 				4B1B26DB1F7BC0270002199E /* SmashingFlashing */,
 				4BFD0F951FE6A4250086088A /* SmashingFlashingTests */,
+				4BFD10121FF9780F0086088A /* SmashingFlashingUITests */,
 				4B1B26DA1F7BC0270002199E /* Products */,
 				5DE43A569010F18CA8AEAE3C /* Pods */,
 				680144A7F946F821FD055FC3 /* Frameworks */,
@@ -98,6 +143,7 @@
 			children = (
 				4B1B26D91F7BC0270002199E /* SmashingFlashing.app */,
 				4BFD0F941FE6A4250086088A /* SmashingFlashingTests.xctest */,
+				4BFD10111FF9780F0086088A /* SmashingFlashingUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +151,9 @@
 		4B1B26DB1F7BC0270002199E /* SmashingFlashing */ = {
 			isa = PBXGroup;
 			children = (
+				4BFD10001FF831B40086088A /* SmashingFlashing.entitlements */,
+				4BFD104020055A940086088A /* Helpers */,
+				4BFD0FFF1FF830BA0086088A /* View Model */,
 				4BFD0F781FDBFC2C0086088A /* Models */,
 				4BFD0F751FDB1FE00086088A /* AppDelegate */,
 				4BFD0F731FDB1F910086088A /* Controllers */,
@@ -117,10 +166,11 @@
 		4BFD0F721FDB1F7D0086088A /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				4BFD10341FFBA1AE0086088A /* List.storyboard */,
+				4BFD10301FFB9F350086088A /* Sound.storyboard */,
 				4BFD0F6B1FDB1DC30086088A /* Clown.storyboard */,
 				4B1B26E51F7BC0270002199E /* LaunchScreen.storyboard */,
 				4B1B26E01F7BC0270002199E /* Main.storyboard */,
-				4BFD0F701FDB1E830086088A /* Stuff.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -128,10 +178,13 @@
 		4BFD0F731FDB1F910086088A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4B1B27191FADDF070002199E /* ClownViewController.swift */,
+				4B6682D3200F7CDB00AF9916 /* LoadViewController.swift */,
 				4B1B271B1FADE3D10002199E /* PlayerViewController.swift */,
+				4BFD103C2004D4BE0086088A /* RecordVideoViewController.swift */,
+				4BFD0FF51FF82B800086088A /* RecorderViewController.swift */,
+				4BFD0FF71FF82BC80086088A /* RecordsList.swift */,
 				4B1B27151F8BBF640002199E /* StuffViewController.swift */,
-				4BFD0FDC1FE71F280086088A /* AudioTableViewController.swift */,
+				4BFD10071FF84ABC0086088A /* WalkmanViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -139,8 +192,8 @@
 		4BFD0F741FDB1FBD0086088A /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				4BFD10031FF848510086088A /* Info.plist */,
 				4B1B26E31F7BC0270002199E /* Assets.xcassets */,
-				4B1B26E81F7BC0270002199E /* Info.plist */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -156,8 +209,15 @@
 		4BFD0F781FDBFC2C0086088A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4B34F3AD20108EDB00523104 /* AlertManager.swift */,
+				4B34F3AB200FF3A100523104 /* Cutter.swift */,
 				4BFD0FDE1FE71F750086088A /* DataStore.swift */,
-				4BFD0FE01FE726070086088A /* AudioTableViewCell.swift */,
+				4BFD0FFD1FF82CC70086088A /* FileName.swift */,
+				4BFD104320079C0F0086088A /* TrueMerger.swift */,
+				4BFD10362002BAFF0086088A /* PhotoLibraryManager.swift */,
+				4BFD0FF91FF82C310086088A /* Player.swift */,
+				4BFD0FFB1FF82C990086088A /* Recorder.swift */,
+				4BFD10051FF849BA0086088A /* SlideButtonAction.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,6 +229,31 @@
 				4BFD0F981FE6A4250086088A /* Info.plist */,
 			);
 			path = SmashingFlashingTests;
+			sourceTree = "<group>";
+		};
+		4BFD0FFF1FF830BA0086088A /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				4BFD0FE01FE726070086088A /* AudioTableViewCell.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		4BFD10121FF9780F0086088A /* SmashingFlashingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4BFD10131FF9780F0086088A /* SmashingFlashingUITests.swift */,
+				4BFD10151FF9780F0086088A /* Info.plist */,
+			);
+			path = SmashingFlashingUITests;
+			sourceTree = "<group>";
+		};
+		4BFD104020055A940086088A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4BFD104120055ABA0086088A /* Helper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		5DE43A569010F18CA8AEAE3C /* Pods */ = {
@@ -235,6 +320,24 @@
 			productReference = 4BFD0F941FE6A4250086088A /* SmashingFlashingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		4BFD10101FF9780F0086088A /* SmashingFlashingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BFD10181FF9780F0086088A /* Build configuration list for PBXNativeTarget "SmashingFlashingUITests" */;
+			buildPhases = (
+				4BFD100D1FF9780F0086088A /* Sources */,
+				4BFD100E1FF9780F0086088A /* Frameworks */,
+				4BFD100F1FF9780F0086088A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4BFD10171FF9780F0086088A /* PBXTargetDependency */,
+			);
+			name = SmashingFlashingUITests;
+			productName = SmashingFlashingUITests;
+			productReference = 4BFD10111FF9780F0086088A /* SmashingFlashingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -248,8 +351,18 @@
 					4B1B26D81F7BC0270002199E = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					4BFD0F931FE6A4250086088A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4B1B26D81F7BC0270002199E;
+					};
+					4BFD10101FF9780F0086088A = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 4B1B26D81F7BC0270002199E;
@@ -271,6 +384,7 @@
 			targets = (
 				4B1B26D81F7BC0270002199E /* SmashingFlashing */,
 				4BFD0F931FE6A4250086088A /* SmashingFlashingTests */,
+				4BFD10101FF9780F0086088A /* SmashingFlashingUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -280,16 +394,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BFD0F7B1FDC137D0086088A /* Info.plist in Resources */,
-				4BFD0F711FDB1E830086088A /* Stuff.storyboard in Resources */,
 				4B1B26E71F7BC0270002199E /* LaunchScreen.storyboard in Resources */,
+				4BFD10351FFBA1AE0086088A /* List.storyboard in Resources */,
+				4BFD10041FF848520086088A /* Info.plist in Resources */,
 				4B1B26E41F7BC0270002199E /* Assets.xcassets in Resources */,
 				4BFD0F6C1FDB1DC30086088A /* Clown.storyboard in Resources */,
+				4BFD10311FFB9F350086088A /* Sound.storyboard in Resources */,
 				4B1B26E21F7BC0270002199E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4BFD0F921FE6A4250086088A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BFD100F1FF9780F0086088A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -321,11 +443,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SmashingFlashing/Pods-SmashingFlashing-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MGSwipeTableCell/MGSwipeTableCell.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGSwipeTableCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
@@ -407,13 +531,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B6682D4200F7CDB00AF9916 /* LoadViewController.swift in Sources */,
+				4BFD0FFA1FF82C310086088A /* Player.swift in Sources */,
+				4BFD103D2004D4BE0086088A /* RecordVideoViewController.swift in Sources */,
+				4BFD10081FF84ABC0086088A /* WalkmanViewController.swift in Sources */,
+				4BFD10061FF849BA0086088A /* SlideButtonAction.swift in Sources */,
+				4BFD0FFE1FF82CC70086088A /* FileName.swift in Sources */,
 				4BFD0FE11FE726070086088A /* AudioTableViewCell.swift in Sources */,
 				4BFD0FDF1FE71F750086088A /* DataStore.swift in Sources */,
-				4BFD0F7C1FDC138D0086088A /* Info.plist in Sources */,
+				4B34F3AC200FF3A100523104 /* Cutter.swift in Sources */,
+				4B34F3AE20108EDC00523104 /* AlertManager.swift in Sources */,
+				4BFD104220055ABA0086088A /* Helper.swift in Sources */,
+				4BFD0FFC1FF82C990086088A /* Recorder.swift in Sources */,
+				4BFD10372002BAFF0086088A /* PhotoLibraryManager.swift in Sources */,
 				4B1B26DD1F7BC0270002199E /* AppDelegate.swift in Sources */,
-				4B1B271A1FADDF070002199E /* ClownViewController.swift in Sources */,
+				4BFD0FF61FF82B800086088A /* RecorderViewController.swift in Sources */,
 				4B1B27161F8BBF640002199E /* StuffViewController.swift in Sources */,
-				4BFD0FDD1FE71F280086088A /* AudioTableViewController.swift in Sources */,
+				4BFD0FF81FF82BC80086088A /* RecordsList.swift in Sources */,
+				4BFD104420079C0F0086088A /* TrueMerger.swift in Sources */,
 				4B1B271C1FADE3D10002199E /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +561,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4BFD100D1FF9780F0086088A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BFD10141FF9780F0086088A /* SmashingFlashingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -433,6 +576,11 @@
 			isa = PBXTargetDependency;
 			target = 4B1B26D81F7BC0270002199E /* SmashingFlashing */;
 			targetProxy = 4BFD0F991FE6A4250086088A /* PBXContainerItemProxy */;
+		};
+		4BFD10171FF9780F0086088A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B1B26D81F7BC0270002199E /* SmashingFlashing */;
+			targetProxy = 4BFD10161FF9780F0086088A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -568,6 +716,7 @@
 			baseConfigurationReference = AD970B57F7D6BFA4EFEEFB90 /* Pods-SmashingFlashing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmashingFlashing/SmashingFlashing.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R7MGG2Y2XW;
 				INFOPLIST_FILE = "$(SRCROOT)/SmashingFlashing/Supporting files/Info.plist";
@@ -584,6 +733,7 @@
 			baseConfigurationReference = 71CE75FF24A4717AC03FC8A9 /* Pods-SmashingFlashing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmashingFlashing/SmashingFlashing.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R7MGG2Y2XW;
 				INFOPLIST_FILE = "$(SRCROOT)/SmashingFlashing/Supporting files/Info.plist";
@@ -631,6 +781,38 @@
 			};
 			name = Release;
 		};
+		4BFD10191FF9780F0086088A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R7MGG2Y2XW;
+				INFOPLIST_FILE = SmashingFlashingUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NM.SmashingFlashingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SmashingFlashing;
+			};
+			name = Debug;
+		};
+		4BFD101A1FF9780F0086088A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R7MGG2Y2XW;
+				INFOPLIST_FILE = SmashingFlashingUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NM.SmashingFlashingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SmashingFlashing;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -657,6 +839,15 @@
 			buildConfigurations = (
 				4BFD0F9B1FE6A4250086088A /* Debug */,
 				4BFD0F9C1FE6A4250086088A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BFD10181FF9780F0086088A /* Build configuration list for PBXNativeTarget "SmashingFlashingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BFD10191FF9780F0086088A /* Debug */,
+				4BFD101A1FF9780F0086088A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

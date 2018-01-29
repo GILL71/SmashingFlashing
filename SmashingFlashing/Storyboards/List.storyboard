@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O62-cb-npx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,45 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
-        <scene sceneID="I4K-0o-ZpN">
-            <objects>
-                <tabBarController id="O62-cb-npx" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ul0-FS-XkH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="1pO-NG-1X6" kind="relationship" relationship="viewControllers" id="P0P-UC-U4p"/>
-                        <segue destination="O9s-kz-5hb" kind="relationship" relationship="viewControllers" id="1sg-cQ-OOm"/>
-                        <segue destination="fDM-Qd-ACp" kind="relationship" relationship="viewControllers" id="fEF-hA-kpH"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KKu-oz-Bq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-438" y="-134"/>
-        </scene>
-        <!--Clown-->
-        <scene sceneID="6FE-vG-n90">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Clown" id="1pO-NG-1X6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="lp9-gD-eD6"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AUN-xK-R1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="130" y="-454"/>
-        </scene>
-        <!--Sound-->
-        <scene sceneID="aXt-h0-z8g">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Sound" id="O9s-kz-5hb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="GVM-hf-HIj"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wUb-Qf-m2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="561" y="453"/>
-        </scene>
         <!--Stuff-->
         <scene sceneID="uhK-Uw-jdg">
             <objects>
@@ -92,7 +53,13 @@
                             <outlet property="delegate" destination="13W-bx-oVg" id="jYB-cB-5af"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="TR5-nv-awe"/>
+                    <navigationItem key="navigationItem" id="TR5-nv-awe">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="1lx-lR-hiQ">
+                            <connections>
+                                <action selector="refreshCollectionAction:" destination="13W-bx-oVg" id="Fcq-lA-vmn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="F1Q-aC-gqQ" kind="show" identifier="player_segue" id="GMq-s3-per">
                             <nil key="action"/>
@@ -104,7 +71,7 @@
             </objects>
             <point key="canvasLocation" x="1911.2" y="221.73913043478262"/>
         </scene>
-        <!--Player View Controller-->
+        <!--Time-->
         <scene sceneID="6BA-bt-dEd">
             <objects>
                 <viewController storyboardIdentifier="PlayerViewController" id="F1Q-aC-gqQ" customClass="PlayerViewController" customModule="SmashingFlashing" customModuleProvider="target" sceneMemberID="viewController">
@@ -120,7 +87,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4d-if-9PX">
-                                <rect key="frame" x="0.0" y="524" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="573" width="375" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZl-Zz-F95">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -138,9 +105,17 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIA-Su-bJA">
                                         <rect key="frame" x="270" y="10" width="46" height="30"/>
-                                        <state key="normal" title="Edit"/>
+                                        <state key="normal" title="Merge"/>
                                         <connections>
                                             <action selector="editAction:" destination="F1Q-aC-gqQ" eventType="touchUpInside" id="Sl8-uJ-M5E"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIM-f9-B1A">
+                                        <rect key="frame" x="62" y="10" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Cut"/>
+                                        <connections>
+                                            <action selector="cutAction:" destination="F1Q-aC-gqQ" eventType="touchUpInside" id="Zi9-t6-Qr9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -160,46 +135,28 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8q-vt-7H5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fzf-28-klf">
-                                        <rect key="frame" x="57" y="12" width="261" height="31"/>
-                                        <connections>
-                                            <action selector="sliderValueChanged:" destination="F1Q-aC-gqQ" eventType="valueChanged" id="l9j-Zq-3TA"/>
-                                        </connections>
-                                    </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egi-hW-Xyl">
-                                        <rect key="frame" x="321" y="17" width="46" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpR-Si-pd1">
-                                        <rect key="frame" x="8" y="17" width="46" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="egi-hW-Xyl" firstAttribute="leading" secondItem="fzf-28-klf" secondAttribute="trailing" constant="5" id="HjU-4b-zgV"/>
-                                    <constraint firstAttribute="trailing" secondItem="egi-hW-Xyl" secondAttribute="trailing" constant="8" id="SZC-BH-Nh5"/>
-                                    <constraint firstItem="BpR-Si-pd1" firstAttribute="leading" secondItem="f8q-vt-7H5" secondAttribute="leading" constant="8" id="Tde-Ab-cIL"/>
-                                    <constraint firstItem="BpR-Si-pd1" firstAttribute="centerY" secondItem="fzf-28-klf" secondAttribute="centerY" id="ahz-8O-i6B"/>
-                                    <constraint firstItem="fzf-28-klf" firstAttribute="leading" secondItem="BpR-Si-pd1" secondAttribute="trailing" constant="5" id="d8q-N4-2VK"/>
                                     <constraint firstAttribute="height" constant="50" id="gyL-MD-m3P"/>
-                                    <constraint firstAttribute="bottom" secondItem="fzf-28-klf" secondAttribute="bottom" constant="8" id="ja7-0Z-UfU"/>
-                                    <constraint firstItem="egi-hW-Xyl" firstAttribute="centerY" secondItem="fzf-28-klf" secondAttribute="centerY" id="s78-5e-xLo"/>
                                 </constraints>
                             </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vQz-Gf-tCZ">
+                                <rect key="frame" x="-2" y="64" width="379" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="F1Q-aC-gqQ" eventType="valueChanged" id="yAO-aw-EIM"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ov5-Un-GSh" firstAttribute="centerY" secondItem="XcC-wZ-Nzo" secondAttribute="centerY" id="09W-fI-2Tt"/>
                             <constraint firstItem="f8q-vt-7H5" firstAttribute="trailing" secondItem="cf3-kS-Cce" secondAttribute="trailing" id="9Gr-W5-4ID"/>
+                            <constraint firstItem="vQz-Gf-tCZ" firstAttribute="top" secondItem="cf3-kS-Cce" secondAttribute="top" id="IVB-uk-Ns5"/>
                             <constraint firstItem="ov5-Un-GSh" firstAttribute="leading" secondItem="cf3-kS-Cce" secondAttribute="leading" id="Ohs-kv-f1T"/>
                             <constraint firstItem="m4d-if-9PX" firstAttribute="trailing" secondItem="cf3-kS-Cce" secondAttribute="trailing" id="TAI-jJ-gEy"/>
+                            <constraint firstItem="vQz-Gf-tCZ" firstAttribute="trailing" secondItem="cf3-kS-Cce" secondAttribute="trailing" id="UY8-EB-ANJ"/>
                             <constraint firstItem="ov5-Un-GSh" firstAttribute="trailing" secondItem="cf3-kS-Cce" secondAttribute="trailing" id="VOn-QG-1es"/>
+                            <constraint firstItem="vQz-Gf-tCZ" firstAttribute="leading" secondItem="cf3-kS-Cce" secondAttribute="leading" id="WMN-cJ-6SX"/>
                             <constraint firstItem="f8q-vt-7H5" firstAttribute="top" secondItem="XcC-wZ-Nzo" secondAttribute="top" id="ayA-3Q-whM"/>
                             <constraint firstItem="f8q-vt-7H5" firstAttribute="leading" secondItem="cf3-kS-Cce" secondAttribute="leading" id="i8F-yF-ibD"/>
                             <constraint firstItem="ov5-Un-GSh" firstAttribute="centerX" secondItem="XcC-wZ-Nzo" secondAttribute="centerX" id="mSv-bl-dlZ"/>
@@ -213,13 +170,13 @@
                         <barButtonItem title="Item" image="hamburger" id="nsq-7P-epw"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="RBx-fL-kY0"/>
                     </toolbarItems>
+                    <navigationItem key="navigationItem" title="Time" id="kdx-60-Cbp"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="currentTimeLabel" destination="BpR-Si-pd1" id="s8c-Tg-IKh"/>
-                        <outlet property="durationLabel" destination="egi-hW-Xyl" id="orW-pG-O8p"/>
                         <outlet property="editPanelView" destination="BZl-Zz-F95" id="rDg-MV-la0"/>
                         <outlet property="playButton" destination="cNn-Am-ohj" id="OFZ-rn-hdp"/>
-                        <outlet property="timeSlider" destination="fzf-28-klf" id="ZNe-tq-WV5"/>
+                        <outlet property="timeItem" destination="kdx-60-Cbp" id="3in-FZ-gLZ"/>
+                        <outlet property="timeSlider" destination="vQz-Gf-tCZ" id="vLl-x4-bmP"/>
                         <outlet property="videoView" destination="ov5-Un-GSh" id="3iq-dv-fOC"/>
                     </connections>
                 </viewController>
@@ -244,7 +201,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UmQ-Nc-fXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="-51"/>
+            <point key="canvasLocation" x="1034" y="222"/>
         </scene>
     </scenes>
     <resources>

@@ -5,13 +5,14 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="I4K-0o-ZpN">
             <objects>
-                <tabBarController id="O62-cb-npx" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="O62-cb-npx" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ul0-FS-XkH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -19,98 +20,92 @@
                     </tabBar>
                     <connections>
                         <segue destination="1pO-NG-1X6" kind="relationship" relationship="viewControllers" id="P0P-UC-U4p"/>
-                        <segue destination="I8K-TP-SYY" kind="relationship" relationship="viewControllers" id="qR7-ra-6wG"/>
-                        <segue destination="FUM-mh-BSt" kind="relationship" relationship="viewControllers" id="ET9-ue-Icf"/>
+                        <segue destination="O9s-kz-5hb" kind="relationship" relationship="viewControllers" id="1sg-cQ-OOm"/>
+                        <segue destination="vt5-e1-pMN" kind="relationship" relationship="viewControllers" id="fEF-hA-kpH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKu-oz-Bq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-438" y="-134"/>
         </scene>
+        <!--Load View Controller-->
+        <scene sceneID="FJt-1i-bQy">
+            <objects>
+                <viewController id="8Y5-cH-kbW" customClass="LoadViewController" customModule="SmashingFlashing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z8p-HA-vAf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="start" translatesAutoresizingMaskIntoConstraints="NO" id="mhY-fx-KGT">
+                                <rect key="frame" x="72" y="383" width="225" height="167"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chelk" translatesAutoresizingMaskIntoConstraints="NO" id="Zff-Tf-c6E">
+                                <rect key="frame" x="72" y="368" width="225" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="D3h-rY-Law"/>
+                    </view>
+                    <connections>
+                        <outlet property="rotateImage" destination="Zff-Tf-c6E" id="b4m-OF-Hij"/>
+                        <outlet property="startImage" destination="mhY-fx-KGT" id="gPc-jj-Czm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pJp-69-FX6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-599.20000000000005" y="-840.62968515742136"/>
+        </scene>
         <!--Clown-->
         <scene sceneID="6FE-vG-n90">
             <objects>
                 <viewControllerPlaceholder storyboardName="Clown" id="1pO-NG-1X6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="lp9-gD-eD6"/>
+                    <tabBarItem key="tabBarItem" title="Clown" id="lp9-gD-eD6"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AUN-xK-R1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130" y="-454"/>
         </scene>
-        <!--UINavigationController-vvO-ZS-Kc3-->
-        <scene sceneID="DNz-S9-8C0">
+        <!--Sound-->
+        <scene sceneID="aXt-h0-z8g">
             <objects>
-                <viewControllerPlaceholder storyboardName="Stuff" referencedIdentifier="UINavigationController-vvO-ZS-Kc3" id="I8K-TP-SYY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="xc2-rl-O4H"/>
+                <viewControllerPlaceholder storyboardName="Sound" id="O9s-kz-5hb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sound" id="GVM-hf-HIj"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yoQ-8m-TaE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wUb-Qf-m2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130" y="22"/>
+            <point key="canvasLocation" x="561" y="453"/>
         </scene>
-        <!--PlayerViewController-->
-        <scene sceneID="8oN-xc-96G">
+        <!--UINavigationController-vvO-ZS-Kc3-->
+        <scene sceneID="jpx-Ok-31j">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="PlayerViewController" storyboardName="Stuff" referencedIdentifier="PlayerViewController" id="tWb-U2-TDh" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBK-tv-szQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="UINavigationController-vvO-ZS-Kc3" storyboardName="List" referencedIdentifier="UINavigationController-vvO-ZS-Kc3" id="vt5-e1-pMN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Stuff" id="i3k-Cf-3lW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vVe-jp-AUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="798" y="22"/>
+            <point key="canvasLocation" x="804" y="-51"/>
         </scene>
         <!--UICollectionViewController-NVV-vO-zEf-->
-        <scene sceneID="kZA-v0-KEc">
+        <scene sceneID="X8C-A7-1HM">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="UICollectionViewController-NVV-vO-zEf" storyboardName="Stuff" referencedIdentifier="UICollectionViewController-NVV-vO-zEf" id="Lt2-Ng-ZFC" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hT5-zQ-6W6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="UICollectionViewController-NVV-vO-zEf" storyboardName="List" referencedIdentifier="UICollectionViewController-NVV-vO-zEf" id="JTG-QU-d0m" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xcz-hX-3AE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="480" y="22"/>
+            <point key="canvasLocation" x="1422" y="-51"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="UtJ-bo-KZW">
+        <!--PlayerViewController-->
+        <scene sceneID="BKq-Jh-fzC">
             <objects>
-                <tableViewController id="FUM-mh-BSt" customClass="AudioTableViewController" customModule="SmashingFlashing" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0Ph-86-BZ8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="65" id="2Vf-EW-Q8n" customClass="AudioTableViewCell" customModule="SmashingFlashing" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="65"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Vf-EW-Q8n" id="oip-rU-HgS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U52-2P-6eD">
-                                            <rect key="frame" x="16" y="0.0" width="197" height="54"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZX-3O-mm8">
-                                            <rect key="frame" x="271" y="5" width="88" height="54"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="durationLabel" destination="dZX-3O-mm8" id="WAs-al-wk2"/>
-                                    <outlet property="nameLabel" destination="U52-2P-6eD" id="alF-6N-xaY"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="FUM-mh-BSt" id="tMO-AN-oUa"/>
-                            <outlet property="delegate" destination="FUM-mh-BSt" id="Ooc-WX-G9n"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="GvT-Mb-9BC"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ucs-j3-aRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="PlayerViewController" storyboardName="List" referencedIdentifier="PlayerViewController" id="lkP-Ee-JcO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ua2-Cq-qmi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532" y="452.92353823088462"/>
+            <point key="canvasLocation" x="1976" y="-51"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chelk" width="1080" height="932"/>
+        <image name="start" width="1080" height="932"/>
+    </resources>
 </document>
