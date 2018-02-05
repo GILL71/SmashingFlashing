@@ -17,16 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="part2" translatesAutoresizingMaskIntoConstraints="NO" id="w1y-8t-I38">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="part2" translatesAutoresizingMaskIntoConstraints="NO" id="w1y-8t-I38">
                                 <rect key="frame" x="97" y="263" width="181" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="181" id="8tQ-y3-qTq"/>
+                                    <constraint firstAttribute="height" constant="19" id="vex-cw-0m2"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="part1named" translatesAutoresizingMaskIntoConstraints="NO" id="YGo-Z3-iTA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="part1named" translatesAutoresizingMaskIntoConstraints="NO" id="YGo-Z3-iTA">
                                 <rect key="frame" x="97" y="263" width="181" height="141"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="141" id="DDN-I8-Skr"/>
+                                    <constraint firstAttribute="width" constant="181" id="tRw-z4-KEm"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YGo-Z3-iTA" firstAttribute="centerX" secondItem="qtT-7a-1Qb" secondAttribute="centerX" id="JZ2-ES-gPV"/>
+                            <constraint firstItem="YGo-Z3-iTA" firstAttribute="centerY" secondItem="qtT-7a-1Qb" secondAttribute="centerY" id="O50-a8-It6"/>
+                            <constraint firstItem="w1y-8t-I38" firstAttribute="centerX" secondItem="qtT-7a-1Qb" secondAttribute="centerX" id="OQ5-06-ReZ"/>
+                            <constraint firstItem="YGo-Z3-iTA" firstAttribute="top" secondItem="w1y-8t-I38" secondAttribute="bottom" constant="-19" id="ToM-XL-Lic"/>
+                            <constraint firstItem="YGo-Z3-iTA" firstAttribute="centerY" secondItem="qtT-7a-1Qb" secondAttribute="centerY" id="jaw-Rq-Uy5"/>
+                            <constraint firstItem="YGo-Z3-iTA" firstAttribute="centerX" secondItem="qtT-7a-1Qb" secondAttribute="centerX" id="qNu-DT-FZG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mSq-Og-5l5"/>
                     </view>
                 </viewController>
