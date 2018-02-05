@@ -20,7 +20,7 @@ class PhotoLibraryManager {
                 
                 let fetchResult = PHAsset.fetchAssets(with: .video, options: fetchOptions).lastObject
                 PHImageManager().requestAVAsset(forVideo: fetchResult!, options: nil, resultHandler: { (avurlAsset, audioMix, dict) in
-                    //print
+                    Helper().removeFileAtURLIfExists(url: url)
                 })
             }
         }

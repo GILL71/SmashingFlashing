@@ -207,7 +207,7 @@ class TrueMerger {
             switch assetExport.status {
             case AVAssetExportSessionStatus.completed:
                 print("-----Merge mutable video with trimmed audio exportation complete.\(String(describing: mergedAudioVideoUrl))")
-                PhotoLibraryManager.exportToPhotoLibraryAssetWith(url: self.reducedAudioUrl!)
+                PhotoLibraryManager.exportToPhotoLibraryAssetWith(url: mergedAudioVideoUrl!)
                 Helper().removeFileAtURLIfExists(url: self.reducedAudioUrl!)
                 completion()
             case  AVAssetExportSessionStatus.failed:

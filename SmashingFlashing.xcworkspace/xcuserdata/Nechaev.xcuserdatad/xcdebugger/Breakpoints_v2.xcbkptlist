@@ -28,7 +28,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmashingFlashing/Models/Cutter.swift"
-            timestampString = "538145892.989936"
+            timestampString = "539517973.265437"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
@@ -162,6 +162,86 @@
             startingLineNumber = "29"
             endingLineNumber = "29"
             landmarkName = "removeFileAtURLIfExists(url:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmashingFlashing/Models/TrueMerger.swift"
+            timestampString = "539518127.6415499"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
+            landmarkName = "mergeMutableVideoWithAudio(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SmashingFlashing.TrueMerger.mergeMutableVideoWithAudio(completion: () -&gt; ()) -&gt; Swift.Optional&lt;Foundation.URL&gt;"
+                  moduleName = "SmashingFlashing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Nechaev/Documents/SmashingFlashing/SmashingFlashing/Models/TrueMerger.swift"
+                  timestampString = "539517990.596929"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "206"
+                  endingLineNumber = "206"
+                  offsetFromSymbolStart = "8970">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in SmashingFlashing.TrueMerger.mergeMutableVideoWithAudio(completion: () -&gt; ()) -&gt; Swift.Optional&lt;Foundation.URL&gt;"
+                  moduleName = "SmashingFlashing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Nechaev/Documents/SmashingFlashing/SmashingFlashing/Models/TrueMerger.swift"
+                  timestampString = "539517990.598736"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
+                  offsetFromSymbolStart = "17">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmashingFlashing/Models/TrueMerger.swift"
+            timestampString = "539518127.6416709"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
+            landmarkName = "mergeMutableVideoWithAudio(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmashingFlashing/Models/TrueMerger.swift"
+            timestampString = "539518127.641799"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "mergeMutableVideoWithAudio(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
