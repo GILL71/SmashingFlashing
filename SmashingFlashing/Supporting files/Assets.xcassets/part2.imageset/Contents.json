@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "chelk.png",
+      "filename" : "part2.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "part2@2x.png",
       "scale" : "2x"
     },
     {

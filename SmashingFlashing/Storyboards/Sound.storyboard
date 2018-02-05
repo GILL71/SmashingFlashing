@@ -73,7 +73,7 @@
         <scene sceneID="kMo-9d-cHf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k8H-kd-OBi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sound" id="mg1-Np-nKp"/>
+                    <tabBarItem key="tabBarItem" title="Sound" image="003-speaker" selectedImage="003-speaker" id="mg1-Np-nKp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jHt-Mc-wES">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -257,6 +257,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="003-speaker" width="32" height="32"/>
         <image name="Next" width="105" height="34"/>
         <image name="Previous" width="105" height="35"/>
         <image name="Record" width="80" height="80"/>

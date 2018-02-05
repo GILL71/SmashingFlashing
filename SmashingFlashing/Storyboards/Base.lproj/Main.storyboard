@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O62-cb-npx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AFD-Ba-ZuX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -28,40 +28,11 @@
             </objects>
             <point key="canvasLocation" x="-438" y="-134"/>
         </scene>
-        <!--Load View Controller-->
-        <scene sceneID="FJt-1i-bQy">
-            <objects>
-                <viewController id="8Y5-cH-kbW" customClass="LoadViewController" customModule="SmashingFlashing" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="z8p-HA-vAf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="start" translatesAutoresizingMaskIntoConstraints="NO" id="mhY-fx-KGT">
-                                <rect key="frame" x="72" y="383" width="225" height="167"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chelk" translatesAutoresizingMaskIntoConstraints="NO" id="Zff-Tf-c6E">
-                                <rect key="frame" x="72" y="368" width="225" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="D3h-rY-Law"/>
-                    </view>
-                    <connections>
-                        <outlet property="rotateImage" destination="Zff-Tf-c6E" id="b4m-OF-Hij"/>
-                        <outlet property="startImage" destination="mhY-fx-KGT" id="gPc-jj-Czm"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pJp-69-FX6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-599.20000000000005" y="-840.62968515742136"/>
-        </scene>
         <!--Clown-->
         <scene sceneID="6FE-vG-n90">
             <objects>
                 <viewControllerPlaceholder storyboardName="Clown" id="1pO-NG-1X6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Clown" id="lp9-gD-eD6"/>
+                    <tabBarItem key="tabBarItem" title="Clown" image="002-video-camera" selectedImage="002-video-camera" id="lp9-gD-eD6"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AUN-xK-R1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,7 +42,7 @@
         <scene sceneID="aXt-h0-z8g">
             <objects>
                 <viewControllerPlaceholder storyboardName="Sound" id="O9s-kz-5hb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sound" id="GVM-hf-HIj"/>
+                    <tabBarItem key="tabBarItem" title="Sound" image="003-speaker" selectedImage="003-speaker" id="GVM-hf-HIj"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUb-Qf-m2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,7 +52,7 @@
         <scene sceneID="jpx-Ok-31j">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="UINavigationController-vvO-ZS-Kc3" storyboardName="List" referencedIdentifier="UINavigationController-vvO-ZS-Kc3" id="vt5-e1-pMN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Stuff" id="i3k-Cf-3lW"/>
+                    <tabBarItem key="tabBarItem" title="Stuff" image="001-clapperboard" selectedImage="001-clapperboard" id="i3k-Cf-3lW"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vVe-jp-AUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,9 +74,42 @@
             </objects>
             <point key="canvasLocation" x="1976" y="-51"/>
         </scene>
+        <!--Load View Controller-->
+        <scene sceneID="AzQ-Aq-mB7">
+            <objects>
+                <viewController id="AFD-Ba-ZuX" customClass="LoadViewController" customModule="SmashingFlashing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h4s-rc-qP8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="part1named" translatesAutoresizingMaskIntoConstraints="NO" id="1MT-2T-gvj">
+                                <rect key="frame" x="97" y="175" width="181" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="part2" translatesAutoresizingMaskIntoConstraints="NO" id="ac5-ss-Xfe">
+                                <rect key="frame" x="108" y="191" width="158" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="y7D-r9-r9S"/>
+                    </view>
+                    <connections>
+                        <outlet property="rotatingView" destination="ac5-ss-Xfe" id="oBP-ne-yAt"/>
+                        <outlet property="transitionView" destination="1MT-2T-gvj" id="hlc-oj-Jjo"/>
+                        <segue destination="O62-cb-npx" kind="show" identifier="startVc" id="ZhE-ZZ-rJE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TH9-Vc-duq" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1306" y="-134"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="chelk" width="1080" height="932"/>
-        <image name="start" width="1080" height="932"/>
+        <image name="001-clapperboard" width="32" height="32"/>
+        <image name="002-video-camera" width="32" height="32"/>
+        <image name="003-speaker" width="32" height="32"/>
+        <image name="part1named" width="936" height="698"/>
+        <image name="part2" width="938" height="94"/>
     </resources>
 </document>
