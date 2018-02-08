@@ -17,18 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="part2" translatesAutoresizingMaskIntoConstraints="NO" id="w1y-8t-I38">
-                                <rect key="frame" x="97" y="263" width="181" height="19"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="181" id="8tQ-y3-qTq"/>
-                                    <constraint firstAttribute="height" constant="19" id="vex-cw-0m2"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="part1named" translatesAutoresizingMaskIntoConstraints="NO" id="YGo-Z3-iTA">
                                 <rect key="frame" x="97" y="263" width="181" height="141"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="141" id="DDN-I8-Skr"/>
                                     <constraint firstAttribute="width" constant="181" id="tRw-z4-KEm"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="part2" translatesAutoresizingMaskIntoConstraints="NO" id="w1y-8t-I38">
+                                <rect key="frame" x="97" y="263" width="181" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="181" id="8tQ-y3-qTq"/>
+                                    <constraint firstAttribute="height" constant="19" id="vex-cw-0m2"/>
                                 </constraints>
                             </imageView>
                         </subviews>

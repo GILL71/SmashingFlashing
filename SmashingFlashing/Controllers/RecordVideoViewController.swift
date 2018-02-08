@@ -16,8 +16,6 @@ class RecordVideoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cameraButton.layer.borderWidth = 1.0
-        cameraButton.layer.borderColor = UIColor.yellow.cgColor
     }
     
     @IBAction func cameraButtonAction(_ sender: UIButton) {

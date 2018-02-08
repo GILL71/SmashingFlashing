@@ -188,7 +188,9 @@
         <scene sceneID="Y52-vi-phl">
             <objects>
                 <navigationController storyboardIdentifier="UINavigationController-vvO-ZS-Kc3" automaticallyAdjustsScrollViewInsets="NO" id="fDM-Qd-ACp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Stuff" image="001-clapperboard" selectedImage="001-clapperboard" id="07f-FC-ljb"/>
+                    <tabBarItem key="tabBarItem" title="Stuff" image="001-clapperboard" selectedImage="001-clapperboard" id="07f-FC-ljb">
+                        <color key="badgeColor" red="1" green="0.88383428050000001" blue="0.23058282290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="geV-kb-t5b">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

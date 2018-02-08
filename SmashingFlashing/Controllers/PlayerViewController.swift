@@ -47,9 +47,6 @@ class PlayerViewController: UIViewController {
         print("video:")
         print(videoUrl)
         print("/video|")
-        let docsDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].path
-        let audioUrl = "file:".appending(docsDir.appending("/" + records[0].name))
-//        merger = Merger(audio: URL(string: audioUrl)!, video: videoUrl)
         self.tabBarController?.tabBar.isHidden = true
         playButton.isEnabled = true
         timeSlider.value = 0

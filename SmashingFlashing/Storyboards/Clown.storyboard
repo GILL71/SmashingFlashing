@@ -54,7 +54,14 @@
         <scene sceneID="xT1-GL-Ida">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="clz-PI-hMw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Clown" image="002-video-camera" selectedImage="002-video-camera" id="ahp-TA-yQZ"/>
+                    <tabBarItem key="tabBarItem" title="Clown" image="002-video-camera" selectedImage="002-video-camera" id="ahp-TA-yQZ">
+                        <color key="badgeColor" red="1" green="0.88383428050000001" blue="0.23058282290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4dA-ZP-9uh">

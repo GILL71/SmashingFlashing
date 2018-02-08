@@ -16,8 +16,22 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ul0-FS-XkH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="0.88383428050000001" blue="0.23058282290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.88383428050000001" blue="0.23058282290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                            <color key="value" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="1pO-NG-1X6" kind="relationship" relationship="viewControllers" id="P0P-UC-U4p"/>
                         <segue destination="O9s-kz-5hb" kind="relationship" relationship="viewControllers" id="1sg-cQ-OOm"/>
@@ -32,31 +46,37 @@
         <scene sceneID="6FE-vG-n90">
             <objects>
                 <viewControllerPlaceholder storyboardName="Clown" id="1pO-NG-1X6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Clown" image="002-video-camera" selectedImage="002-video-camera" id="lp9-gD-eD6"/>
+                    <tabBarItem key="tabBarItem" title="Clown" image="002-video-camera" selectedImage="002-video-camera" id="lp9-gD-eD6">
+                        <color key="badgeColor" red="1" green="0.88383428050000001" blue="0.23058282290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AUN-xK-R1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130" y="-454"/>
+            <point key="canvasLocation" x="470" y="-422"/>
         </scene>
         <!--Sound-->
         <scene sceneID="aXt-h0-z8g">
             <objects>
                 <viewControllerPlaceholder storyboardName="Sound" id="O9s-kz-5hb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sound" image="003-speaker" selectedImage="003-speaker" id="GVM-hf-HIj"/>
+                    <tabBarItem key="tabBarItem" title="Sound" image="003-speaker" selectedImage="003-speaker" id="GVM-hf-HIj">
+                        <color key="badgeColor" red="1" green="0.88383428050000001" blue="0.23058282290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUb-Qf-m2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="561" y="453"/>
+            <point key="canvasLocation" x="372" y="321"/>
         </scene>
         <!--UINavigationController-vvO-ZS-Kc3-->
         <scene sceneID="jpx-Ok-31j">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="UINavigationController-vvO-ZS-Kc3" storyboardName="List" referencedIdentifier="UINavigationController-vvO-ZS-Kc3" id="vt5-e1-pMN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Stuff" image="001-clapperboard" selectedImage="001-clapperboard" id="i3k-Cf-3lW"/>
+                    <tabBarItem key="tabBarItem" title="Stuff" image="001-clapperboard" selectedImage="001-clapperboard" id="i3k-Cf-3lW">
+                        <color key="badgeColor" red="1" green="0.88383428050000001" blue="0.23058282290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vVe-jp-AUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="-51"/>
+            <point key="canvasLocation" x="734" y="-135"/>
         </scene>
         <!--UICollectionViewController-NVV-vO-zEf-->
         <scene sceneID="X8C-A7-1HM">
@@ -97,7 +117,7 @@
                     <connections>
                         <outlet property="rotatingView" destination="ac5-ss-Xfe" id="oBP-ne-yAt"/>
                         <outlet property="transitionView" destination="1MT-2T-gvj" id="hlc-oj-Jjo"/>
-                        <segue destination="O62-cb-npx" kind="show" identifier="startVc" id="ZhE-ZZ-rJE"/>
+                        <segue destination="O62-cb-npx" kind="show" identifier="startVc" id="R8t-6e-aEn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TH9-Vc-duq" sceneMemberID="firstResponder"/>

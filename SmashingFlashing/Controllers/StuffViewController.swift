@@ -86,7 +86,6 @@ class StuffViewController: UICollectionViewController, PHPhotoLibraryChangeObser
             PHCachingImageManager().requestAVAsset(forVideo: asset, options: nil, resultHandler: { (asset: AVAsset?, audioMix: AVAudioMix?, info: [AnyHashable: Any]?) in
                 let asset = asset as! AVURLAsset
                 self.sentUrl = asset.url
-                //playerVC.mediaUrl = URL(string: "file:///Users/Nechaev/Library/Developer/CoreSimulator/Devices/4D4CCF19-A478-4884-B610-ACE5C3C455F1/data/Media/DCIM/100APPLE/IMG_0006.MOV")!
                 downloadGroup.leave() //4
             })
             downloadGroup.wait() // 5
