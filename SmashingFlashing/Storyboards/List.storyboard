@@ -170,7 +170,15 @@
                         <barButtonItem title="Item" image="hamburger" id="nsq-7P-epw"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="RBx-fL-kY0"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Time" id="kdx-60-Cbp"/>
+                    <navigationItem key="navigationItem" title="Time" id="kdx-60-Cbp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="GxO-qw-xxS">
+                            <connections>
+                                <segue destination="IXz-Rp-CFD" kind="popoverPresentation" identifier="Popover" popoverAnchorBarButtonItem="GxO-qw-xxS" id="4MZ-wn-gZ7">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="editPanelView" destination="BZl-Zz-F95" id="rDg-MV-la0"/>
@@ -183,6 +191,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p4H-ds-Bst" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2660" y="221.73913043478262"/>
+        </scene>
+        <!--Audio Records View Controller-->
+        <scene sceneID="uka-B5-TWp">
+            <objects>
+                <tableViewController id="IXz-Rp-CFD" customClass="AudioRecordsViewController" customModule="SmashingFlashing" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Eo0-gd-oBJ">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="popoverCell" id="zAm-OE-rQp">
+                                <rect key="frame" x="0.0" y="28" width="250" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zAm-OE-rQp" id="640-tr-YAr">
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="IXz-Rp-CFD" id="142-r5-JPD"/>
+                            <outlet property="delegate" destination="IXz-Rp-CFD" id="XWT-oH-Q5W"/>
+                        </connections>
+                    </tableView>
+                    <value key="contentSizeForViewInPopover" type="size" width="250" height="250"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="250" height="250"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="11g-Ea-FeL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3542" y="221"/>
         </scene>
         <!--Stuff-->
         <scene sceneID="Y52-vi-phl">

@@ -208,7 +208,26 @@ class PlayerViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UITextFieldTextDidChange, object: alertController.textFields?[0])
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UITextFieldTextDidChange, object: alertController.textFields?[1])
     }
+  
+    //MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destVC = segue.destination as? AudioRecordsViewController, segue.identifier == "Popover" {
+            destVC.videoURL = mediaUrl
+            if let popover = destVC.popoverPresentationController {
+                popover.delegate = self
+                popover.barButtonItem = navigationItem.rightBarButtonItem
+                popover.permittedArrowDirections = .any
+            }
+        }
+    }
 }
+
+extension PlayerViewController: UIPopoverPresentationControllerDelegate {
+  func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+    return .none
+  }
+}
+
 
 extension CMTime {
     public var timeString: String {
