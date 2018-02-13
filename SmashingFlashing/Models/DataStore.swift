@@ -11,9 +11,7 @@ import RealmSwift
 import AVFoundation
 
 struct Record {
-    var audio: Data
     var name: String
-    var urlString: String
     var duration: Double
 }
 
@@ -22,9 +20,7 @@ enum RealmError: Error {
 }
 
 class RealmRecord: Object {
-    @objc dynamic var audio = Data()
     @objc dynamic var name = ""
-    @objc dynamic var urlString = ""
     @objc dynamic var duration: Double = 0.0
     
     override static func primaryKey() -> String? {
@@ -33,17 +29,12 @@ class RealmRecord: Object {
     
     convenience init(_ record: Record) {
         self.init()
-        audio = record.audio
         name = record.name
-        urlString = record.urlString
         duration = record.duration
     }
     
     var entity: Record {
-        return Record(audio: audio,
-                      name: name,
-                      urlString: urlString,
-                      duration: duration)
+        return Record( name: name, duration: duration)
     }
 }
 
@@ -56,16 +47,16 @@ class RecordRealmDataSource: DataSource {
         return realm.objects(RealmRecord.self).map {$0.entity}
     }
     func getById(id: String) -> T {
-        return Record(audio: Data(), name: "", urlString: "", duration: 0.0 as Double)
+        return Record(name: "", duration: 0.0 as Double)
     }
     func insert(item: T) {
         try! realm.write {
             realm.add(RealmRecord(item))
         }
     }
-    func update(by id: String, with name: String) {
+    func update(by name: String) {
         try! realm.write {
-            let predicate = NSPredicate(format: "urlString = %@", id)
+            let predicate = NSPredicate(format: "name = %@", name)
             let targetRecord = realm.objects(RealmRecord.self).filter(predicate)
             targetRecord[0].name = name
         }
@@ -80,7 +71,7 @@ class RecordRealmDataSource: DataSource {
     }
     func deleteById(id: String) {
         try! realm.write {
-            let predicate = NSPredicate(format: "urlString = %@", id)
+            let predicate = NSPredicate(format: "name = %@", id)
             let targetRecord = realm.objects(RealmRecord.self).filter(predicate)
             realm.delete(targetRecord)
         }
@@ -93,15 +84,6 @@ class RecordRealmDataSource: DataSource {
         }
         return true
     }
-    
-    func getUrlByName(name: String) -> String? {
-        let predicate = NSPredicate(format: "name = %@", name)
-        let targetRecord = realm.objects(RealmRecord.self).filter(predicate)
-        if targetRecord.count == 0 {
-            return nil
-        }
-        return targetRecord.first?.urlString
-    }
 }
 
 protocol DataSource {
@@ -110,11 +92,9 @@ protocol DataSource {
     func getAll() -> [T]
     func getById(id: String) -> T
     func insert(item: T)
-    func update(by id: String, with name: String)
+    func update(by name: String)
     func clean()
     func delete(item: T)
     func deleteById(id: String)
-    
-    func getUrlByName(name: String) -> String?
 }
 

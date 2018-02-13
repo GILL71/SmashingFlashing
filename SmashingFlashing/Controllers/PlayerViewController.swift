@@ -105,24 +105,41 @@ class PlayerViewController: UIViewController {
             self.removeTextFieldObserver(alertController: alertController)
         }
         let chooseAction = UIAlertAction(title: "Choose", style: .default) { action in
-            let lastComponent = String(describing: alertController.textFields![0].text!) + ".m4a"
-            if let audioUrl = self.storage.getUrlByName(name: lastComponent) {
-                self.removeTextFieldObserver(alertController: alertController)
-                self.merger = TrueMerger(audio: URL(string: audioUrl)!, video: self.mediaUrl!)
+            let audioName = String(describing: alertController.textFields![0].text!) + ".m4a"
+            self.removeTextFieldObserver(alertController: alertController)
+            if self.storage.checkBy(name: audioName) {
+                let alert = UIAlertController(title: "Error", message: "No audio with input name", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            } else {
+                self.merger = TrueMerger(audio: audioName, video: self.mediaUrl!)
                 self.showActivityIndicator()
                 guard let resultVideoUrl = self.merger?.mergeMutableVideoWithAudio(completion: {
-                     self.hideActivityIndicator()
+                    self.hideActivityIndicator()
                 }) else {
                     print("bad try for video merging")
                     return
                 }
                 print(resultVideoUrl)
-            } else {
-                self.removeTextFieldObserver(alertController: alertController)
-                let alert = UIAlertController(title: "Error", message: "No audio with input name", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
             }
+            
+//            if let audioUrl = self.storage.getUrlByName(name: lastComponent) {
+//                self.removeTextFieldObserver(alertController: alertController)
+//                self.merger = TrueMerger(audio: URL(string: audioUrl)!, video: self.mediaUrl!)
+//                self.showActivityIndicator()
+//                guard let resultVideoUrl = self.merger?.mergeMutableVideoWithAudio(completion: {
+//                     self.hideActivityIndicator()
+//                }) else {
+//                    print("bad try for video merging")
+//                    return
+//                }
+//                print(resultVideoUrl)
+//            } else {
+//                self.removeTextFieldObserver(alertController: alertController)
+//                let alert = UIAlertController(title: "Error", message: "No audio with input name", preferredStyle: UIAlertControllerStyle.alert)
+//                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+//                self.present(alert, animated: true, completion: nil)
+//            }
         }
         chooseAction.isEnabled = false
         addAlertSaveAction = chooseAction

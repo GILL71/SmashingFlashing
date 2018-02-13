@@ -12,6 +12,7 @@ import UIKit
 class SBAction {
     var storage = RecordRealmDataSource()
     let fileName = FileName()
+    
     func delete(_ record: Record) {
         guard let url = URL(string: getUrl(for: record.name)) else {
             print("ERROR: INVALID DELETING URL")
@@ -19,7 +20,8 @@ class SBAction {
         }
         do {
             try FileManager().removeItem(at: url)
-            storage.deleteById(id: record.urlString)
+            //storage.deleteById(id: record.urlString)
+            storage.deleteById(id: record.name)
         } catch {
             print(error.localizedDescription)
         }
@@ -44,7 +46,9 @@ class SBAction {
                 resourceValues.name = name
                 do {
                     try url.setResourceValues(resourceValues)
-                    self.storage.update(by: record.urlString, with: name!)
+                    //self.storage.update(by: record.urlString, with: name!)
+                    //update old name and new name...???
+                    self.storage.update(by: name!)
                 } catch {
                     print(error.localizedDescription)
                 }

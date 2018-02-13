@@ -79,6 +79,7 @@ class Recorder: NSObject, AVAudioRecorderDelegate {
     }
     
     func finishRecording(success: Bool, name: String) {
+        var urlString = URL(string:"st")
         if success {
             print(success)
             
@@ -93,13 +94,13 @@ class Recorder: NSObject, AVAudioRecorderDelegate {
             //var urlString = "file:"
             //urlString = urlString.appending((documentsDirectory.path?.appending("/" + name))!)
             let docsRL = DocsDirectory.path
-            let urlString = docsRL.appendingPathComponent(name)! as URL
+            //let
+            urlString = docsRL.appendingPathComponent(name)! as URL
+            audioRecorder = nil
             do {
-                let audioData = try Data(contentsOf: urlString)
-                storage.insert(item: Record(audio: audioData,
-                                            name: name,
-                                            urlString: String(describing: urlString),
-                                            duration: Double(CMTimeGetSeconds((AVURLAsset(url: urlString)).duration))))
+                let audioData = try Data(contentsOf: urlString!)
+                storage.insert(item: Record(name: name,
+                                            duration: Double(CMTimeGetSeconds((AVURLAsset(url: urlString!)).duration))))
             } catch {
                 print(error.localizedDescription)
             }
