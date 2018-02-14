@@ -17,6 +17,7 @@
 		4B34F3AC200FF3A100523104 /* Cutter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B34F3AB200FF3A100523104 /* Cutter.swift */; };
 		4B34F3AE20108EDC00523104 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B34F3AD20108EDB00523104 /* AlertManager.swift */; };
 		4B6682D4200F7CDB00AF9916 /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6682D3200F7CDB00AF9916 /* LoadViewController.swift */; };
+		4B6CB980203302BB00642B67 /* AudioRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CB97F203302BB00642B67 /* AudioRecordsViewController.swift */; };
 		4BFD0F6C1FDB1DC30086088A /* Clown.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFD0F6B1FDB1DC30086088A /* Clown.storyboard */; };
 		4BFD0F971FE6A4250086088A /* SmashingFlashingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD0F961FE6A4250086088A /* SmashingFlashingTests.swift */; };
 		4BFD0FDF1FE71F750086088A /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD0FDE1FE71F750086088A /* DataStore.swift */; };
@@ -36,7 +37,6 @@
 		4BFD103D2004D4BE0086088A /* RecordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD103C2004D4BE0086088A /* RecordVideoViewController.swift */; };
 		4BFD104220055ABA0086088A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD104120055ABA0086088A /* Helper.swift */; };
 		4BFD104420079C0F0086088A /* TrueMerger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD104320079C0F0086088A /* TrueMerger.swift */; };
-		7C73CE46202DFAC200653323 /* AudioRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C73CE45202DFAC200653323 /* AudioRecordsViewController.swift */; };
 		C79D2E43BB77907772388E2E /* Pods_SmashingFlashing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D84E3F2C2B5DAE733D5799DB /* Pods_SmashingFlashing.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +70,7 @@
 		4B34F3AB200FF3A100523104 /* Cutter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cutter.swift; sourceTree = "<group>"; };
 		4B34F3AD20108EDB00523104 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		4B6682D3200F7CDB00AF9916 /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
+		4B6CB97F203302BB00642B67 /* AudioRecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecordsViewController.swift; sourceTree = "<group>"; };
 		4BFD0F6B1FDB1DC30086088A /* Clown.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Clown.storyboard; sourceTree = "<group>"; };
 		4BFD0F941FE6A4250086088A /* SmashingFlashingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmashingFlashingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BFD0F961FE6A4250086088A /* SmashingFlashingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmashingFlashingTests.swift; sourceTree = "<group>"; };
@@ -95,7 +96,6 @@
 		4BFD104120055ABA0086088A /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		4BFD104320079C0F0086088A /* TrueMerger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrueMerger.swift; sourceTree = "<group>"; };
 		71CE75FF24A4717AC03FC8A9 /* Pods-SmashingFlashing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashingFlashing.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmashingFlashing/Pods-SmashingFlashing.release.xcconfig"; sourceTree = "<group>"; };
-		7C73CE45202DFAC200653323 /* AudioRecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecordsViewController.swift; sourceTree = "<group>"; };
 		AD970B57F7D6BFA4EFEEFB90 /* Pods-SmashingFlashing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashingFlashing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmashingFlashing/Pods-SmashingFlashing.debug.xcconfig"; sourceTree = "<group>"; };
 		D84E3F2C2B5DAE733D5799DB /* Pods_SmashingFlashing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmashingFlashing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBCEC6875D8F7C47BA75E88A /* Pods-SmashingFlashingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashingFlashingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmashingFlashingTests/Pods-SmashingFlashingTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +180,7 @@
 		4BFD0F731FDB1F910086088A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4B6CB97F203302BB00642B67 /* AudioRecordsViewController.swift */,
 				4B6682D3200F7CDB00AF9916 /* LoadViewController.swift */,
 				4B1B271B1FADE3D10002199E /* PlayerViewController.swift */,
 				4BFD103C2004D4BE0086088A /* RecordVideoViewController.swift */,
@@ -187,7 +188,6 @@
 				4BFD0FF71FF82BC80086088A /* RecordsList.swift */,
 				4B1B27151F8BBF640002199E /* StuffViewController.swift */,
 				4BFD10071FF84ABC0086088A /* WalkmanViewController.swift */,
-				7C73CE45202DFAC200653323 /* AudioRecordsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -550,7 +550,7 @@
 				4B1B26DD1F7BC0270002199E /* AppDelegate.swift in Sources */,
 				4BFD0FF61FF82B800086088A /* RecorderViewController.swift in Sources */,
 				4B1B27161F8BBF640002199E /* StuffViewController.swift in Sources */,
-				7C73CE46202DFAC200653323 /* AudioRecordsViewController.swift in Sources */,
+				4B6CB980203302BB00642B67 /* AudioRecordsViewController.swift in Sources */,
 				4BFD0FF81FF82BC80086088A /* RecordsList.swift in Sources */,
 				4BFD104420079C0F0086088A /* TrueMerger.swift in Sources */,
 				4B1B271C1FADE3D10002199E /* PlayerViewController.swift in Sources */,

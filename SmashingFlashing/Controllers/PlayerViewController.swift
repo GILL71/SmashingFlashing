@@ -26,6 +26,7 @@ class PlayerViewController: UIViewController {
     var isVideoPlaying = false
     var merger: TrueMerger?
     var storage = RecordRealmDataSource()
+    var audioName: String?
     
     weak var addAlertSaveAction: UIAlertAction?
     weak var cutAlertOkAction: UIAlertAction?
@@ -34,7 +35,7 @@ class PlayerViewController: UIViewController {
     
     let records: Results<RealmRecord> = {
         let realm = try! Realm()
-        return realm.objects(RealmRecord.self).sorted(byKeyPath: "urlString", ascending: true)
+        return realm.objects(RealmRecord.self).sorted(byKeyPath: "name", ascending: true)
     }()
     
     override func viewDidLoad() {
@@ -57,6 +58,8 @@ class PlayerViewController: UIViewController {
         playerLayer.videoGravity = .resizeAspect
         videoView.layer.addSublayer(playerLayer)
         videoView.translatesAutoresizingMaskIntoConstraints = false
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -112,7 +115,7 @@ class PlayerViewController: UIViewController {
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             } else {
-                self.merger = TrueMerger(audio: audioName, video: self.mediaUrl!)
+                self.merger = TrueMerger(audioName: audioName, video: self.mediaUrl!)
                 self.showActivityIndicator()
                 guard let resultVideoUrl = self.merger?.mergeMutableVideoWithAudio(completion: {
                     self.hideActivityIndicator()
@@ -230,6 +233,11 @@ class PlayerViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destVC = segue.destination as? AudioRecordsViewController, segue.identifier == "Popover" {
             destVC.videoURL = mediaUrl
+            
+            //
+            destVC.delegate = self
+            //
+            
             if let popover = destVC.popoverPresentationController {
                 popover.delegate = self
                 popover.barButtonItem = navigationItem.rightBarButtonItem
@@ -245,6 +253,16 @@ extension PlayerViewController: UIPopoverPresentationControllerDelegate {
   }
 }
 
+protocol SavingViewControllerDelegate
+{
+    func saveData(data: String)
+}
+
+extension PlayerViewController: SavingViewControllerDelegate {
+    func saveData(data: String) {
+        audioName = data
+    }
+}
 
 extension CMTime {
     public var timeString: String {

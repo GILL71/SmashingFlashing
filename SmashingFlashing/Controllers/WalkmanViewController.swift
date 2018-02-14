@@ -23,7 +23,7 @@ class WalkmanViewController: UIViewController {
     
     let records: Results<RealmRecord> = {
         let realm = try! Realm()
-        return realm.objects(RealmRecord.self).sorted(byKeyPath: "urlString", ascending: true)
+        return realm.objects(RealmRecord.self).sorted(byKeyPath: "name", ascending: true)
     }()
     
     override func viewDidLoad() {

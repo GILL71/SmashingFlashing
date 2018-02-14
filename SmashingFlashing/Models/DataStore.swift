@@ -24,7 +24,7 @@ class RealmRecord: Object {
     @objc dynamic var duration: Double = 0.0
     
     override static func primaryKey() -> String? {
-        return "urlString"
+        return "name"
     }
     
     convenience init(_ record: Record) {
@@ -54,11 +54,11 @@ class RecordRealmDataSource: DataSource {
             realm.add(RealmRecord(item))
         }
     }
-    func update(by name: String) {
+    func update(instead name: String, by newName: String) {
         try! realm.write {
             let predicate = NSPredicate(format: "name = %@", name)
             let targetRecord = realm.objects(RealmRecord.self).filter(predicate)
-            targetRecord[0].name = name
+            targetRecord[0].name = newName
         }
     }
     func clean() {
@@ -92,7 +92,7 @@ protocol DataSource {
     func getAll() -> [T]
     func getById(id: String) -> T
     func insert(item: T)
-    func update(by name: String)
+    func update(instead name: String, by newName: String)
     func clean()
     func delete(item: T)
     func deleteById(id: String)

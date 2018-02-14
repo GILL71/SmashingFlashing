@@ -26,8 +26,8 @@ class TrueMerger {
         }
     }
     
-    init(audio: String, video: URL) {
-        audioUrl = DocsDirectory.path.appendingPathComponent(audio)!
+    init(audioName: String, video: URL) {
+        audioUrl = DocsDirectory.path.appendingPathComponent(audioName)!
         videoUrl = video
     }
     

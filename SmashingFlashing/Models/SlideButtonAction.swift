@@ -48,7 +48,7 @@ class SBAction {
                     try url.setResourceValues(resourceValues)
                     //self.storage.update(by: record.urlString, with: name!)
                     //update old name and new name...???
-                    self.storage.update(by: name!)
+                    self.storage.update(instead: record.name, by: name!)
                 } catch {
                     print(error.localizedDescription)
                 }

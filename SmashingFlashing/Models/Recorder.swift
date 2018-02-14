@@ -98,7 +98,6 @@ class Recorder: NSObject, AVAudioRecorderDelegate {
             urlString = docsRL.appendingPathComponent(name)! as URL
             audioRecorder = nil
             do {
-                let audioData = try Data(contentsOf: urlString!)
                 storage.insert(item: Record(name: name,
                                             duration: Double(CMTimeGetSeconds((AVURLAsset(url: urlString!)).duration))))
             } catch {
